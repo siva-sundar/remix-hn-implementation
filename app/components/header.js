@@ -1,6 +1,5 @@
-import Nav from './nav'
-import Logo from './logo'
-import Link from 'next/link'
+import Nav from "./nav";
+import Logo from "./logo";
 
 export default function Header() {
   return (
@@ -65,22 +64,22 @@ export default function Header() {
       />
       <header>
         <div className="left">
-          <Link href="/">
-            <a>
-              <span className="logo">
-                <Logo />
-              </span>
-              <span className="site-title">Hacker Next</span>
-            </a>
-          </Link>
+          <a href="/">
+            <span className="logo">
+              <Logo />
+            </span>
+            <span className="site-title">Hacker Next</span>
+          </a>
           <div className="nav">
             <Nav />
           </div>
         </div>
         <div className="right">
-          <a href="/login" className="login">login</a>
+          <a href="/login" className="login">
+            login
+          </a>
         </div>
       </header>
     </>
-  )
+  );
 }

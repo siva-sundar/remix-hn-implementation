@@ -1,22 +1,34 @@
-# Next.js 12 React Server Components Demo (Alpha)
+# Welcome to Remix!
 
-This is the demo of Hacker News built with Next.js and React Server Components. Read our announcement here: [Next.js 12](https://nextjs.org/blog/next-12).
+- [Remix Docs](https://remix.run/docs)
 
-**Try the demo: https://next-news-rsc.vercel.sh**
+## Deployment
 
-### Development
+After having run the `create-remix` command and selected "Vercel" as a deployment target, you only need to [import your Git repository](https://vercel.com/new) into Vercel, and it will be deployed.
 
-To get started, run the following commands:
+If you'd like to avoid using a Git repository, you can also deploy the directory by running [Vercel CLI](https://vercel.com/cli):
 
+```sh
+npm i -g vercel
+vercel
 ```
-yarn
-yarn dev
+
+It is generally recommended to use a Git repository, because future commits will then automatically be deployed by Vercel, through its [Git Integration](https://vercel.com/docs/concepts/git).
+
+## Development
+
+To run your Remix app locally, make sure your project's local dependencies are installed:
+
+```sh
+npm install
 ```
 
-And visit localhost:3000.
+Afterwards, start the Remix development server like so:
 
-### Note
+```sh
+npm run dev
+```
 
-React Server Components are still [experimental](https://reactjs.org/blog/2020/12/21/data-fetching-with-react-server-components.html). To learn more about React Server Components, read our blog post: [Everything About React Server Components](https://vercel.com/blog/everything-about-react-server-components).
+Open up [http://localhost:3000](http://localhost:3000) and you should be ready to go!
 
-React Server Components support is a built-in feature of Next.js 12. Full documentation is available here: [React 18 — Next.js](https://nextjs.org/docs/advanced-features/react-18).
+If you're used to using the `vercel dev` command provided by [Vercel CLI](https://vercel.com/cli) instead, you can also use that, but it's not needed.

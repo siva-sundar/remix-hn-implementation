@@ -1,5 +1,5 @@
-import Story from './story.client'
-import Link from 'next/link'
+import Story from "./story";
+import { Link } from "remix";
 
 export default ({ stories, page = 1, offset = null }) => (
   <div>
@@ -14,8 +14,8 @@ export default ({ stories, page = 1, offset = null }) => (
       </div>
     ))}
     <footer className="footer">
-      <Link prefetch href={`/news?p=${page + 1}`}>
-        <a>More</a>
+      <Link href={`/news?p=${page + 1}`}>
+        More
       </Link>
     </footer>
 
@@ -35,7 +35,7 @@ export default ({ stories, page = 1, offset = null }) => (
         text-align: right;
       }
       .count::after {
-        content: '.';
+        content: ".";
       }
       .story {
         flex: 100;
@@ -52,4 +52,4 @@ export default ({ stories, page = 1, offset = null }) => (
       }
     `}</style>
   </div>
-)
+);

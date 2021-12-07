@@ -1,4 +1,8 @@
 node_modules
-.next
-*.log
+
+.cache
 .vercel
+.output
+
+public/build
+api/build
