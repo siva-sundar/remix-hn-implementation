@@ -5,16 +5,19 @@ import Footer from "../components/footer";
 // Utils
 import fetchData from "../lib/fetch-data";
 import { transform } from "../lib/get-item";
+import { useLoaderData } from "@remix-run/react";
 
 export async function loader() {
   const storyIds = await fetchData("topstories");
+
   const data = await Promise.all(
     storyIds.slice(0, 30).map((id) => fetchData(`item/${id}`).then(transform))
   );
-  return data;
+  return { data };
 }
 
-export default function News({ data }) {
+export default function News() {
+  const { data } = useLoaderData();
   return (
     <Page>
       {data.map((item, i) => {
